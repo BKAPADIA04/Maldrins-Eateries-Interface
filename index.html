@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>Maldrin's Chinese Restaurant</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Maldrin's Chinese Restaurant">
+    <meta name="description" content="A Compact, Intimate Chinese Restaurant Offering Classic Dishes Plus Some Other Items Like Shawarma.">
+    
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN JS Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Preload Images -->
+    <link rel="preload" as = "image" href="./images/hero-slider-1.jpg">
+    <link rel="preload" as = "image" href="./images/hero-slider-2.jpg">
+    <link rel="preload" as = "image" href="./images/hero-slider-3.jpg">
+    <link rel="preload" as = "image" href="./images/restaurant_ambience.jpg">
+
+</head>
+<body>
+    
+    <!-- Preloader -->
+    <!-- Background ka Background image to be done via position  -->
+
+    <div class="preloader" id="preload">
+        <div class="circle"></div>
+        <p class="text">Maldrin's</p>
+    </div>  
+
+    <!-- Responsive Navbar --> 
+    <div class="navbar_hero">
+    <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">MALDRIN'S</a></div>
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about_us">About Us</a></li>
+                    <li><a href="#special_dish">Our Menus</a></li>
+                    <li><a href="#reservation_section">Reservation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#"><button class="order_online">
+                    Order Online
+                </button></a>
+                <div class="socials_toggle">
+                    <ul class="socials">
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                        <li><a href="https://www.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
+                    </ul>
+                    <div class="toggle_btn">
+                        <i class="fa-solid fa-bars fa-fade fa-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown_toggle ">
+                <ul class="links">
+                    <li><a href="hero">Home</a></li>
+                    <li><a href="about">About Us</a></li>
+                    <li><a href="menus">Our Menus</a></li>
+                    <li><a href="reservation">Reservation</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <a href="#"><button class="order_online">
+                        Order Online
+                    </button></a>
+                </ul>
+            </div> 
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <!-- <header>
+            <div class="navbar sticky" id="sticky">
+                <div class="logo"><a href="#">MALDRIN'S</a></div>
+                <ul class="links">
+                    <li><a href="hero">Home</a></li>
+                    <li><a href="about">About Us</a></li>
+                    <li><a href="menus">Our Menus</a></li>
+                    <li><a href="reservation">Reservation</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+                <a href="#"><button class="order_online">
+                    Order Online
+                </button></a>
+                <div class="socials_toggle">
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
+                    </ul>
+                    <div class="toggle_btn">
+                        <i class="fa-solid fa-bars fa-fade fa-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="dropdown_toggle">
+                <ul class="links">
+                    <li><a href="hero">Home</a></li>
+                    <li><a href="about">About Us</a></li>
+                    <li><a href="menus">Our Menus</a></li>
+                    <li><a href="reservation">Reservation</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <a href="#"><button class="order_online">
+                        Order Online
+                    </button></a>
+                </ul>
+            </div> 
+        </header> --> 
+        <ul class="hero-slider">
+            <li class="slider-item active">
+                <!-- <div class="slider-bg">
+                    <img src="./images/hero-slider-1.jpg" alt="Hero-Slider-3" width="100%" height="950px">
+                </div> -->
+                <p class="body-2 section-subtitle slider-reveal">MORE FLAVOR FOR LESS</p>
+
+                <h1 class="hero-title slider-reveal main-text">
+                  <div class="upper">Taste The</div>
+                  <div class="lower">Difference</div>
+                </h1>
+    
+                <p class="body-2 hero-text slider-reveal">
+                    When the going gets tough, the tough get grilling. Bringing heat <br>
+                    to your meat. No one can compete with our meat
+                </p>
+    
+                <a href="#" class="btn btn-primary slider-reveal">
+                  <span class="text text-1">Our Menus</span>
+                </a>
+            </li>
+        </ul>
+        <br><br><br><br><br><br>
+    </section>
+    </div>
+
+    <!-- Special Occasion Destination --> 
+   <section class="occasion" id="about_us">
+        <div class="container_occasion">
+            <div class="occasion1 reveal shine"> 
+                    <img src="./images/event-3.jpg" alt="" width="100%" height="0">
+            </div> 
+            <div class="occasion2">
+                    <div class="occasion-text ">
+                        <div class="occasion-text-1 reveal">
+                            YOUR SPECIAL OCCASION DESTINATION!  
+                        </div>
+                        <div class="occasion-text-2 reveal">
+                            The Maldrin's is a premium taste that yearns to be savored, ground chicken between your teeth.
+                        </div>
+                    </div>
+                    <div class="occasion-separator reveal">
+                    </div>
+            </div>
+        </div>
+        <br><br><br>
+    </section> 
+
+    <!-- Special Dish Rotator -->
+    <section class="special_dish_rotator" id="special_dish">
+        <div class="frame">
+            <img class="rotator" src="./images/rotate1.jpeg" alt="Special Rotator" width="600px" height="400px">
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br>
+
+    <!-- Parallax Effect -->
+    <section class="parallex_container" id="reservation_section">
+        <div class="reservation reveal">
+            <div class="reservation-text-1 reveal">
+                WE SAVED YOU A SEAT!!  
+            </div>
+            <div class="reservation-text-2 reveal">
+                Make An Online
+                Reservation.
+            </div>
+            <div class="reservation-text-3 reveal">
+                <a href="#">RESERVATION </a> 
+            </div> 
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="container-footer">
+            <div class="resto-name">
+                <a href="#"><span class="resto-name-text reveal"><i>MALDRIN'S</i></span></a>
+            </div>
+            <div class="navbar-contents">
+                <ul class="links reveal">
+                    <li><a class="links-text" href="./index.html">Home</a></li>
+                    <li><a class="links-text" href="./index.html">About Us</a></li>
+                    <li><a class="links-text" href="./index.html">Our Menus</a></li>
+                    <li><a class="links-text" href="./index.html">Reservation</a></li>
+                    <li><a class="links-text" href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <div class="social-media">
+                    <ul class="socials reveal">
+                        <li><a href="#"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook fa-xl"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-whatsapp fa-xl"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copy-right-text reveal">
+                    <a href="#">&#169;Bhavya Kapadia</a>
+                    <p>All Right Reserved.</p>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of use</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- Ionicon -->
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+   <!-- Custom JS -->
+   <script src="index.js"></script>
+   
+</body>
+</html>
