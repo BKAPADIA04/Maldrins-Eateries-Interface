@@ -1,3 +1,4 @@
+/*Global Variables*/
 /* Global Variables */
 :root
 {
@@ -40,7 +41,7 @@
     --fontSize-body-1: 2.4rem;
     --fontSize-body-2: 1.6rem;
     --fontSize-body-3: 1.8rem;
-    --fontSize-body-4: 1.6rem;
+    --fontSize-body-4: 1.3rem;
     --fontSize-label-1: 1.4rem;
     --fontSize-label-2: 1.2rem;
 
@@ -146,6 +147,7 @@ body
     background-color: #0a1a22;
     /* background-color: url(./images/hero-slider-1.jpg); */
     background-image: url(./images/hero-slider-3.jpg);
+    width: 100%;
     /* transform: translateX(-300px); */
     /* background-color: hsl(221, 100%, 13%); */
     color:var(--white);
@@ -154,11 +156,12 @@ body
     font-weight:var(--weight-regular);
     line-height: var(--lineHeight-5);
     overflow:hidden;
-    height: 110vh; 
-    overflow: overlay;
+    min-height: 100vh; 
+    /* overflow: hidden; */
     /* background-position:center; */ 
     background-repeat: no-repeat;
-    background-size:cover; 
+    background-size:auto; 
+    overflow-x: hidden !important;
 }
 
 body.loaded { overflow: overlay; }
@@ -203,7 +206,7 @@ body.nav-active { overflow: hidden; }
     /* background-color: var(--gold-crayola); */
     /* background-color: hsl(221, 100%, 13%); */
     background-color: transparent;
-    background-image: radial-gradient(at bottom center,#202859e6 0%,#0A1032 100%); */
+    background-image: radial-gradient(at bottom center,#202859e6 0%,#0A1032 100%); 
     opacity: 1; 
     z-index: 10;
     display: flex;
@@ -302,26 +305,27 @@ a:hover
 .navbar
 {
     width: 100vw;
-    height:100px;
-    max-width: 1200px;
-    margin: 0 auto;
+    height:100px; 
+    margin: 0;
     display: flex;
     justify-content: space-around;
     padding-top: 60px;
     position: relative; 
     z-index: 9; 
-    transition: all 0.5s cubic-bezier(.645,.045,.355,1); 
+    /* transition: all 0.5s cubic-bezier(.645,.045,.355,1);  */
 }
 .navbar .logo a, .navbar_sticky .logo a
 {
     font-size: var(--fontSize-title-1);
     font-weight: var(--weight-bold);
 }
+
 .navbar .links, .navbar_sticky .links
 {
     display: flex;
     gap:3rem;
     font-size: var(--fontSize-body-1);
+    z-index: 100000;
 }
 
 .navbar .socials, .navbar_sticky .socials
@@ -331,6 +335,7 @@ a:hover
     align-items: baseline;
     /* size: 2rem; */
     font-size: var(--fontSize-body-1);
+    z-index: 100000;
 }
 .ion-icon
 {
@@ -368,30 +373,31 @@ a:hover
     gap:4rem;
     justify-content:baseline;
     align-items: baseline;
+    z-index: 100000;
 }
 
 /* Dropdown Toggle */
 .dropdown_toggle
 {
-    position: absolute;
+    position: fixed;
     right: 0rem;
     top: 0;
-    width: 300px;
+    width: 200px;
     background: #0c191b;
     height:100vh;
-    display: none;
+    display:none;
     backdrop-filter: blur(15px);
     overflow: hidden;
     padding-top: 60px;  
-    /* transition:  */
-    /* transform: translate(-400px,0); */
-    animation: transform 500ms ease;
+    /* transform: translateX(-100%);  */
+    /* transition: transform .5s ease-in-out;  */
+    animation: transform 500ms linear forwards;
     /* -webkit-transition: -webkit-transform 500ms ease; */
     /* transition: all 0.5s cubic-bezier(.645,.045,.355,1);
     transform: translate(0,0); */
 }
 @keyframes transform {
-    0% { width: 0%}
+    0% { width: 0%;}
     100% {width:300px;}  
 }
 
@@ -424,16 +430,15 @@ a:hover
 }
 .active.dropdown_toggle
 {
-    display: block;
+    display:grid;
     /* transform: translate(-300px,0); */
-    /* transition: transform 500ms ease; */
+    animation: transform_back 500ms linear normal reverse;
     /* transition: height 0.2s (0.075, 0.82, 0.165, 1); */
     /* animation: var(--transition-1); */
     /* animation: transform_back 500ms linear; */
 }
 @keyframes transform_back {
-    0% { right: 300px;}
-    100% {right:0px;}  
+    100% {right:0;}  
 }
 
 
@@ -457,7 +462,7 @@ a:hover
     }
     .socials_toggle
     {
-        position: fixed;
+        position: absolute;
         right: 2.5rem;
     } 
     /* .dropdown_toggle
@@ -482,7 +487,8 @@ a:hover
 .hero
 {
     position: relative;
-    margin: 150px;
+    margin:12%;
+    /* max-width:949px; */
 }
 .text-center
 {
@@ -614,6 +620,7 @@ header
 {
     backdrop-filter: blur(10px); 
     width: 100vw;
+    margin: 0;
 }
 /* Occasion */
 .occasion
@@ -622,8 +629,10 @@ header
 }
 .occasion1
 {
-    width: 500px;
-    height: 600px;
+    width:40%;
+    margin-left: 4%;
+    margin-right: 2%;
+    height: 500px;
     box-sizing: border-box;
     /* border: 0.5px solid rgb(235, 186, 38); */
     /* background-image: url(./images/event-3.jpg); */
@@ -638,7 +647,7 @@ img
 }
 .occasion2
 {
-    width: 800px;
+    width: 60%;
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -754,17 +763,17 @@ img
 
 .special_dish_rotator
 {
-    margin-left: 3px;
-    margin-top:00px;
-    width:1460px;
+    /* margin-left: 3px; */
+    /* margin-top:00px; */
+    width:100%;
     height:950px;
     background-color: #163e3a;
 }
 .frame
 {
-    margin: 10% 10% 30% 30%;
+    /* margin: 10% 30% 10% 30%; */
     padding-top: 450px;
-    width: 600px;
+    width: 100%;
     height:500px;
     box-sizing: border-box;
     /* border: 2px solid rgb(128, 128, 0); */
@@ -794,10 +803,11 @@ img
 .parallex_container
 {
     box-sizing: border-box;
-    width: 1460px;
+    width: 100%;
     height:600px;
     background-image: url(./images/hero-slider-1.jpg);
     background-attachment: fixed;
+    background-size: cover;
     margin-left: 3px;
 }
 .reservation
@@ -875,7 +885,7 @@ img:hover
     align-items: baseline; */
 .container-footer
 {
-    width: 99%;
+    width:100%;
     height: 100%;
     /* margin: 1%; */
     display: flex;
@@ -930,6 +940,7 @@ img:hover
     align-items: baseline;
     /* size: 2rem; */
     font-size: var(--fontSize-body-1);
+    padding-top: 5%;
 }
 .copyright
 {
@@ -945,6 +956,228 @@ img:hover
 }
 .copy-right-text
 {
+    height: 60%;
     padding-left:14%;
     padding-top: 0%;
+}
+
+
+/* Responsive Design */
+
+/* Responsive for 576px to 992px including 768px tablet size eg:ipad pro */
+@media(max-width:992px)
+{
+    .navbar .links,
+    .navbar .order_online
+    {
+        display: none;
+    }
+    .navbar .toggle_btn
+    {
+        display: block;
+    }
+    .logo
+    {
+        position: absolute;
+        left: 2rem;
+    }
+    .socials_toggle
+    {
+        position: absolute;
+        right: 2.5rem;
+    } 
+    /* .dropdown_toggle
+    {
+        display: block;
+    } */
+    /* .socials_toggle
+    {
+        justify-content: space-between;
+    } */
+
+    .hero
+    {
+        margin: 20%;
+    }
+    .section-subtitle
+    {
+        font-size: var(--fontSize-label-2);
+    }
+    .upper,.lower
+    {
+        padding-bottom: 40px;
+    }
+    body
+    {
+        max-height: 50vh;
+    }
+    .social-media .socials
+    {
+        padding-top: 15%;
+    }
+}
+@media (min-width:993px) {
+    .active.dropdown_toggle
+    {
+        display: none;
+    }
+    
+}
+@media only screen and (max-width: 650px) {
+    .container_occasion
+    {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    .occasion1
+    {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .occasion1
+    {
+        height: 300px;
+    }
+    .logo
+    {
+        position: absolute;
+        left: 2rem;
+        /* right: 5%; */
+    } 
+    .socials_toggle
+    {
+        position: absolute;
+        right: 1rem;
+    }
+    .socials
+    {
+        position: absolute;
+        right: 3rem;
+    }
+    /* .navbar.sticky .logo
+    {
+        position:absolute;
+        left : 2rem;
+    } */
+    .section-subtitle::after
+    {
+        width: 180px;
+        margin-block-start: 2px;
+        text-align: center;
+    }
+    .section-subtitle
+    {
+        padding-top: 70px;
+        text-align: center;
+    }
+    .hero-title
+    {
+        font-size: var(--fontSize-title-1);
+    }
+    .upper
+    {
+        padding-bottom: 20px;
+    }
+    .btn-primary::before,.btn-primary::after
+    {
+        width: 180px;
+        margin-block-start: 2px;
+        text-align: center;
+    }
+    .body-2
+    {
+        padding-bottom: 20px;
+    }
+    .occasion
+    {
+        padding-top: 200px;
+    }
+    .occasion1,.occasion2
+    {
+        width: 80%;
+    }
+    .occasion2
+    {
+        height: 400px;
+    }
+    .frame img
+    {
+        width: 60%;
+        height: 60%;
+    }
+    .frame
+    {
+        padding-top: 100px;
+        height: 450px;
+    }
+    .special_dish_rotator
+    {
+        height: 600px;
+    }
+    .parallex_container
+    {
+        background-size:auto;
+        /* transform: translateX(-100px); */
+    }
+    .reservation-text-1
+    {
+        /* text-align: center; */
+        padding-left:2%;
+        /* margin-bottom: 1%; */
+        font-size: var(--fontSize-body-3);
+    }
+    .reservation-text-2
+    {
+        margin-bottom: 5%; 
+    }
+    
+    .reservation-text-2,.reservation-text-3
+    {
+        padding-left:2%;
+        margin: 1%; 
+    }
+    .reservation-text-3
+    {
+        margin-top: 20px;
+        width: 150px;
+        height: 35px;
+        padding-left: 30px;
+    }
+    .footer
+    {
+        margin-top: 20px;
+        height: 450px;
+    }
+    .container-footer
+    {
+        flex-direction: column;
+    }
+    .resto-name,.navbar-contents,.copyright
+    {
+        border-color: transparent;
+        margin: 2%;
+        width: 100%;
+    }
+    .copyright
+    {
+        flex-direction: row;
+    }
+    .copy-right-text
+    {
+        padding-left:20%;
+        height: 50%;
+    }
+    .social-media
+    {
+        height: 50%;
+    }
+    .social-media .socials
+    {
+        gap:1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    
 }
